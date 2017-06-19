@@ -1,0 +1,125 @@
+source 'https://rubygems.org'
+ruby '2.3.1'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.0'
+
+# Rails app configuration using ENV
+gem 'dotenv-rails'
+
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4'
+
+# See https://github.com/rails/execjs#readme for more supported runtimes
+gem 'therubyracer'
+
+# Provides support for Cross-Origin Resource Sharing (CORS) for Rack compatible web applications.
+gem 'rack-cors', :require => 'rack/cors'
+
+# Provides bootstrap framework for rails with sass
+gem 'bootstrap-sass', '~> 3.0'
+
+# Scalable vector icons that can instantly be customized
+gem 'font-awesome-sass'
+
+# Enables all platform features for heroku
+gem 'rails_12factor'
+
+# Forms made easy, a simple DSL, with no opinion on markup.
+gem 'simple_form'
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.0'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0', group: :doc
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use Puma as webserver
+gem 'puma'
+
+# Remote multi-server automation tool
+group :development do
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-passenger'
+  gem 'capistrano-bundler'
+end
+
+# A pretty template language like HAML that should be prefered in the futur
+gem 'slim-rails'
+
+# Mongoid is an Object-Document-Mapper (ODM) for MongoDB
+gem 'mongoid', '~> 6.0.0.rc0'
+
+# Enables a "soft delete" of Mongoid documents
+gem 'mongoid_paranoia'
+
+# Collecting Locale data for Ruby on Rails
+gem 'rails-i18n'
+
+# Simple Token Authentication
+gem 'simple_token_authentication'
+
+# A fixtures replacement with a straightforward definition syntax
+gem "factory_girl_rails", "~> 4.0"
+
+# Faker provides some fake data for testing and seeding dummy data
+gem 'faker'
+
+# Translate routing
+gem 'route_translator'
+
+# Angular.js library for use in Rails 3.1 and above
+gem 'angularjs-rails'
+
+# A wrapper for the Charist.js library (v0.9.7)
+gem 'chartist-rails'
+
+group :development, :test do
+  # Adds step, next, finish and continue commands and breakpoints to Pry using byebug.
+  gem 'pry-byebug'
+  
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+  
+  # A testing framework
+  gem 'rspec-rails', '~> 3'
+  
+  # RSpec matches for Mongoid models, including association and validation matchers
+  gem 'mongoid-rspec', github: 'gurix/mongoid-rspec', branch: 'mongoid_6_support'
+  
+  # Acceptance test framework for web applications
+  gem 'capybara'
+  
+  # RSpec::CollectionMatchers lets you express expected outcomes on collections of an object in an example
+  gem 'rspec-collection_matchers'
+  
+  # A PhantomJS driver for Capybara
+  gem 'poltergeist'
+  
+  # Helper class for launching cross-platform applications in a fire and forget manner.
+  gem 'launchy'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # gem 'spring'
+  
+  # Manage Procfile-based applications
+  gem 'foreman'
+end

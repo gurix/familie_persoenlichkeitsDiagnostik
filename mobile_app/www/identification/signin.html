@@ -1,0 +1,25 @@
+<ion-pane>
+  <div class="bar bar-header bar-light">
+    <a class="button icon ion-ios-arrow-left button-clear button-dark" href="#/identification/email"></a>
+    <h1 class="title">{{'identification.login' | translate}}</h1>
+  </div>
+  <ion-content class="scroll-content has-header" ng-controller="IdentificationSignInController">
+    <form name="form">
+      <div class="list">
+        <div class="item item-divider" translate="identification.signin" translate-value-email="{{user.email}}">
+          
+        </div>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">{{'user.password' | translate}}</span>
+          <input type="password" name="password" ng-model="user.password" required>
+        </label>
+        <label class="item item-submit item-stacked-label">
+          <input type="submit" value="{{'shared.next' | translate}}" class="button button-block" ng-disabled="form.$invalid" ng-click="signin()"/>
+        </label>
+        <div class="item item-text-wrap">
+          <button class="button button-positive button-clear" ng-click="sendpassword()" >{{'user.send_password'  | translate}}</button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-pane>

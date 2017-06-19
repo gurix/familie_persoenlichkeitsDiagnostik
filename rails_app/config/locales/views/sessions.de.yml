@@ -1,0 +1,5 @@
+de:
+  my_account:
+    sessions:
+      index:
+        empty: Sie haben noch keine Situationen erfasst oder Ihre App hat sich noch nicht synchronisiert.

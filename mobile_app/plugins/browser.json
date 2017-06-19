@@ -1,0 +1,64 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.persoenlichkeitsdiagnostik903652"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-settings-hook": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "ch.zhaw.iap.persoenlichkeitsdiagnostik"
+        }
+    }
+}

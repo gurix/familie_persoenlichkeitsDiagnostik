@@ -1,0 +1,58 @@
+de:
+  devise:
+    shared:
+      
+      links:
+        signup: Haben Sie noch kein Konto? Registrieren Sie sich jetzt.
+        forgot_password: Habe Sie das Passwort vergessen?
+        login: Haben Sie bereits ein Konto? Melden Sie sich an.
+          
+    sessions:
+      new:
+        title: Anmelden
+        sign_in: Anmelden
+
+    registrations:
+      new:
+        title: Registrieren
+        subtitle: Registrieren Sie sich jetzt. Die Nutzung  inklusive der Profilerstellung ist kostenlos.
+        sign_up: Registrieren
+        accept_terms_and_conditions: Mit der Registrierung stimmen Sie den AGB und Datenschutzbestimmungen von Persönlichkeitsidagnostik zu.
+
+      edit:
+         title: Konto-Einstellungen
+         save: Speichern
+         personal_details: Angaben zu Ihrer Person
+
+    passwords:
+      new:
+        title: Passwort vergessen?
+        send: Passwort zurücksetzen
+
+      edit:
+        title: Passwort zurücksetzen
+        change_password: Passwort ändern
+  
+  shared:
+    groups:
+      clinical: Gruppe A
+      occupational: Gruppe B
+      
+    situations:
+      work: Bei der Arbeit
+      recreation: In der Freizeit / Erholung
+      family: Bei der Familie
+      holidays: In den Ferien
+      transportation: Unterwegs (Auto/Tram/Bus/Zug/Flugzeug,…)
+      
+    topnav:
+      sign_in: Anmelden
+      register: Registrieren
+      my_account: Mein Konto
+      my_profile: Profil
+      logout: Abmelden
+  
+  layouts:
+    application:
+      copyright_html: "&copy; %{year}  ZHAW IAP Institute of Applied Psychology"
+      terms_and_conditions: Allgemeine Geschäftsbedingungen

@@ -1,0 +1,144 @@
+{  
+  "shared": {
+    "next": "Weiter",
+    "back": "Zurück",
+    "save": "Speichern",
+    "you_are_offline": "Sie sind momentan offline. Bitte verbinden Sie sich mit dem Internet um fortzufahren.",
+    "cancel": "Abbrechen",
+    "ok": "Ok",
+    "delete": "Löschen",
+    "error": "Fehler",
+    "done": "Fertig!"
+  },
+  "overview": {
+    "header": {
+      "title": "Persönlichkeitsdiagnostik"
+    },
+    "add_session": "Situation erfassen",
+    "my_sessions": "Meine Situationen",
+    "my_profile": "Mein Profil",
+    "my_data": "Meine persönlichen Daten",
+    "sync_my_data": "Meine Daten synchronisieren",
+    "notifications": "Erinnerungen",
+    "sign_off": "Abmelden",
+    "custom_fields": "Meine Entwicklungsgedanken",
+    "sign_out_confirmation" : {
+      "title": "Wollen Sie sich jetzt abmelden?",
+      "text": "Ihre Daten bleiben auf dem Gerät gespeichert. Sie können sich jederzeit wieder anmelden."
+    },
+    "synchronisation_failed": "Die Synchronisation ist fehlgeschlagen. Stellen Sie sicher, dass Sie mit dem Internet verbunden sind oder versuchen Sie es später noch einmal.",
+    "synchronisation_succeed": "Die Synchronisation ist abgeschlossen."
+  },
+  "notifications": {
+    "intro": "Aktivieren Sie die Erinnerungen und Sie werden zu zufälligen Zeiten aufgefordert die aktuelle Situation zu erfassen. Sie können selber definieren wieviel mal pro Tag (zwischen 7:00 und 21:00 Uhr) Sie erinnert werden wollen.",
+    "amount_per_day": "Erinnerungen pro Tag",
+    "expiration": "Letzte Erinnerungen",
+    "inactive": " Sie werden zurzeit nicht erinnert.",
+    "active": " Bis {{expiration | date:'dd.MM.y'}} werden Sie {{per_day}} mal pro Tag zwischen 7:00 und 21:00 Uhr zufällig aufgefordert Ihre Situation zu erfassen.",
+    "title": "Wie fühlen Sie sich gerade jetzt?",
+    "test_notification": "Benachrichtigung Testen"
+  },
+  "custom_fields": {
+    "section_title": "Entwicklungsgedanke",
+    "active": "Dieser Entwicklungsgedanke wird in der nächsten Situation miteinbezogen.",
+    "inactive": "Füllen Sie alle Felder aus um den Entwicklungsgedanken zu aktivieren.",
+    "intro": "Entwicklungsgedanken sind zusätzliche Fragen die Sie, zusammen mit ihrer Beratungsperson, definieren können. Die Fragestellungen fliessen individuell in Ihr Profil mit ein.",
+    "first": "Erster Entwicklungsgedanke",
+    "second": "Zweiter Entwicklungsgedanke",
+    "third": "Dritter Entwicklungsgedanke",
+    "lower_value": "Text für tiefe Ausprägung (-50)",
+    "upper_value": "Text für hohe Ausprägung (50)",
+    "title": "Titel / Frage",
+    "key": "Name des Entwicklungsgedanken",
+    "name_not_unique": "Sie haben mehrere Entwicklungsgedanken gleich benannt, bitte geben Sie jedem einen eigenen Namen."
+  },
+  "format": {
+    "datetime": {
+      "short": "{{ date | date:'d.M.yyyy H:mm' }}"
+    }
+  },
+  "user": {
+    "accept_terms_and_conditions": "Ich akzeptiere die Allgemeinen Geschäftsbedingungen",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "password_confirmation": "Passwort bestätigen",
+    "first_name": "Vorname",
+    "last_name": "Nachname",
+    "birth_date": "Geburtsdatum",
+    "gender": "Geschlecht",
+    "genders" : {
+      "female": "Weiblich",
+      "others": "Andere",
+      "male": "Männlich"
+    },
+    "group": "Stichprobe",
+    "groups": {
+      "clinical": "Gruppe A",
+      "occupational": "Gruppe B"
+    },
+    "send_password": "Ich habe mein Passwort vergessen",
+    "password_sent": "Sie erhalten in wenigen Minuten eine E-Mail mit der Anleitung, wie Sie Ihr Passwort zurücksetzen können."
+  },
+  "identification": {
+    "login": "Anmelden",
+    "signin": "Anmelden als {{email}}",
+    "register": "Registrieren",
+    "wrong_password": "Das angegebene Passwort ist falsch."
+  },
+  "registration": {
+    "password_does_not_match": "Passwort bestätigen stimmt nicht mit Passwort überein",
+    "password_to_short": "Das Passwort ist zu kurz, bitte verwenden Sie mehr als 4 Zeichen."  
+  },
+  "questionary": {
+    "mrs20": {
+      "group_title": "Die 5 Dimensionen der Persönlichkeit",
+      "neuroticism": "Neurotizismus",
+      "extraversion": "Extraversion",
+      "agreeableness": "Verträglichkeit",
+      "conscience": "Gewissenhaftigkeit",
+      "openness": "Offenheit/Intellekt"
+    },
+    "panava": {
+      "group_title": "Positive Aktivierung, Negative Aktivierung und Valenz",
+      "positive_affect": "Positiver Affekt",
+      "negative_affect": "Negativer Affekt",
+      "valence": "Zufriedenheit / Glück"
+    },
+    "filter": {
+      "group_title": "Filter",
+      "none": "Alle anzeigen",
+      "top10": "Obere 10%",
+      "bottom10": "Untere 10%"
+    }
+  },
+  "situation": {
+    "title": "Situation vom",
+    "moment": "Zeitpunkt",
+    "situation": "Wo sie sich befunden haben",
+    "description": "Ihre Beschreibung"
+  },
+  "sessions": {
+    "emtpy": "Sie haben noch keine Situationen erfasst.",
+    "situation": {
+        "empty_value": "Wo befinden Sie sich zurzeit?",
+        "caption": "Situation"
+    },
+    "situations": {
+      "work": "Bei der Arbeit",
+      "recreation": "In der Freizeit / Erholung",
+      "family": "Bei der Familie",
+      "holidays": "In den Ferien",
+      "transportation": "Unterwegs (Auto/Tram/Bus/Zug/Flugzeug,…)"
+    },
+    "panava_implicit": {
+      "instruction": "Auf den ersten Blick mag es komisch erscheinen, chinesische Zeichen zu bewerten. Bisherige Forschung zeigte aber dass solche Bewertungen zu wichtigen/bedeutungsvollen Ergebnisse führen können, wenn Sie auf dem ersten Eindruck beruhen. Versuchen Sie einfach, so spontan wie möglich zu antworten."
+    },
+    "description_placeholder": "Bitte beschreiben Sie ihre aktuelle Situation in ein oder zwei Sätzen (optional)",
+    "add_photo": "Photo aufnehmen",
+    "photo": "Nehmen Sie ein Photo auf (optional)",
+    "remove_photo": "Photo entfernen",
+    "cancel_new_sesion": {
+      "title":"Wollen Sie die Eingabe beenden?"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4",
+    "ngCordova": "~0.1.23-alpha"
+  },
+  "dependencies": {
+    "angularjs-slider": "~2.5.0",
+    "chartist": "~0.9.7"
+  }
+}

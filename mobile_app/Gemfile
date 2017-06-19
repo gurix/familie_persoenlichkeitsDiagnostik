@@ -1,0 +1,23 @@
+source 'https://rubygems.org'
+ruby '2.3.1'
+
+# Acceptance test framework for web applications
+gem 'capybara'
+
+# Touch Action is a Ruby Gem used to add touch gestures simulation
+gem 'touch_action'
+
+# Mongoid is an Object-Document-Mapper (ODM) for MongoDB
+gem 'mongoid'
+
+# A testing framework
+gem 'rspec'
+
+# Adds step, next, finish and continue commands and breakpoints to Pry using byebug.
+gem 'pry-byebug'
+
+# Javascript Webdriver for acceptance tests
+gem 'selenium-webdriver'
+
+# Faker provides some fake data for testing and seeding dummy data
+gem 'faker'

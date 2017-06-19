@@ -1,0 +1,53 @@
+@import variables
+
+nav.navbar
+  margin-bottom: 0px
+  background-color: $brand-primary
+  min-height: 111px
+  border-bottom: 0px
+  .container
+    padding: 10px 10px 0px 15px
+
+    .navbar-toggle
+      margin-right: 20px
+
+    .navbar-collapse
+      margin-top: 53px
+      font-weight: bold
+      border: none
+
+      &.collapse.in
+        margin-top: 41px
+      &.collapsing
+        margin-top: 41px
+
+      li a
+        color: white
+        
+        .badge
+          vertical-align: top
+          margin-left: 5px
+        
+      li.active a
+        border-radius: 5px 5px 0px 0px
+        
+      li.active a
+        color: $brand-primary
+
+      li.dropdown.open
+        background: white
+
+        a
+          color: $brand-primary
+          
+    .navbar-header
+      height: 53px
+      .navbar-brand
+        padding: 3px 15px
+
+        img
+          width: 229px
+
+@media (min-width: $grid-float-breakpoint)
+  .pull-nav-right
+    float: right !important

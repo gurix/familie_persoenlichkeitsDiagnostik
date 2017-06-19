@@ -1,0 +1,35 @@
+nav.navbar.navbar-default.navbar-static-top
+  .container
+    .navbar-header
+      button.navbar-toggle data-target='.navbar-collapse' data-toggle='collapse' type='button'
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="#{main_app.root_path}"
+        = image_tag 'logo.svg', alt: 'Persönlichkeitsdiagnostik'
+
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.pull-nav-right
+        li class="#{'active' if request.path == root_path}"
+          a href="/" Home
+        - unless current_user
+          li class="#{'active' if request.path == new_user_session_path}"
+            a href="#{new_user_session_path}" 
+              = t '.sign_in'
+
+          li class="#{'active' if request.path == new_user_registration_path}"
+            a href="#{new_user_registration_path}" 
+              = t '.register'
+        - else
+        
+          li class="#{'active' if request.path == edit_user_registration_path}"
+            a href="#{edit_user_registration_path}" 
+              = t '.my_account'
+
+          li class="#{'active' if request.path =~ /#{profiles_path}/}"
+            a href="#{profiles_path}" 
+              = t '.my_profile'
+
+          li
+            = link_to t('.logout'), destroy_user_session_path, method: :delete

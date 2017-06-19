@@ -1,0 +1,26 @@
+.alert:first-child
+  margin-top: 12px
+  
+  .alert
+    margin-bottom: 0px
+  
+@import 'variables'
+
+.alert-alert
+  @extend .alert-danger !optional
+
+.alert-notice
+  @extend .alert-info !optional
+
+
+#error_explanation
+  @extend .alert !optional
+  @extend .alert-danger !optional
+
+  h2
+    font-size: $font-size-base
+    margin-top: 0px
+
+.field_with_errors
+  input
+    @extend .alert-danger !optional

@@ -1,0 +1,19 @@
+.row
+  .col-xs-12.login
+    .page-header
+      h1= title t '.title'
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = devise_error_messages!
+      .form-group
+        .input-group
+          .input-group-addon
+            .glyphicon.glyphicon-envelope
+          = f.email_field :email, class: 'form-control', placeholder: User.human_attribute_name(:email)
+      .form-group
+        .input-group
+          .input-group-addon
+            i.fa.fa-key
+          = f.password_field :password, autocomplete: 'off',  class: 'form-control', placeholder: User.human_attribute_name(:password)
+      .form-group
+        = f.submit t('.sign_in'), class: 'btn btn-primary btn-block'
+    = render "devise/shared/links"

@@ -1,0 +1,22 @@
+doctype html
+html ng-app="persoenlichkeitsDiagnostikWeb"
+  head
+    title= content_for(:title)
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags 
+  body
+    = render 'shared/topnav'
+    .container.content-container
+      = render partial: 'shared/flash_messages', flash: flash
+      = yield
+    
+    footer.hidden-print
+      .container
+        .row
+          .col-xs-12.col-md-6
+            = t '.copyright_html', year: Time.now.year
+          .col-xs-12.col-md-6
+            .pull-right
+              = link_to t('.terms_and_conditions'), terms_and_conditions_path

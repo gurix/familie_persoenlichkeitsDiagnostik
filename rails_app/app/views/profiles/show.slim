@@ -1,0 +1,96 @@
+h1 = title t('.title', name: @user.full_name)
+#profile ng-controller="ProfileController" ng-init="initialize('#{@user.view_token}')"
+  .text-center ng-hide="data_loaded"
+    i.fa.fa-circle-o-notch.fa-spin.fa-3x.fa-fw
+    h2 Loading...
+
+  div ng-show="data_loaded"
+    .row 
+      .col-xs-12
+        #mainchart.ct-chart.ct-minor-seventh
+    .row
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title
+              = t 'questionary.mrs20'
+              
+          ul.list-group
+            label.list-group-item
+              input type="checkbox" ng-model="display.mrs20_e" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.mrs20_e
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.extraversion'
+            
+            label.list-group-item
+              input type="checkbox" ng-model="display.mrs20_n" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.mrs20_n
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.neurocitism'
+            
+            label.list-group-item
+              input type="checkbox" ng-model="display.mrs20_v" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.mrs20_v
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.agreeableness'
+            
+            label.list-group-item
+              input type="checkbox" ng-model="display.mrs20_g" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.mrs20_g
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.conscience'
+            
+            label.list-group-item
+              input type="checkbox" ng-model="display.mrs20_k" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.mrs20_k
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.openness'
+  
+    .row
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title
+              = t 'questionary.panava'
+              
+          ul.list-group
+            label.list-group-item
+              input type="checkbox" ng-model="display.panava_pa" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.panava_pa
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.positive_affect'
+            
+            label.list-group-item
+              input type="checkbox" ng-model="display.panava_na" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.panava_na
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.negative_affect'
+            
+            label.list-group-item
+              input type="checkbox" ng-model="display.panava_va" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series.panava_va
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              = t 'questionary.valence'
+
+    .row ng-show="custom_field_dimensions.length > 0"
+      .col-xs-12
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title
+              = t 'questionary.custom_fields'
+          
+          ul.list-group  
+            label.list-group-item ng-repeat="field in custom_field_dimensions"
+              input type="checkbox" ng-model="display[field]" ng-change="re_aggregate()"
+              svg width="100" height="10"
+                g.ct-series class="col{{$index}}"
+                  line.ct-line x1="0" y1="5" x2="100" y2="5"
+              | {{field}}

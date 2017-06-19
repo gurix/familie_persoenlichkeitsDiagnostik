@@ -1,0 +1,25 @@
+.row
+  .col-xs-12
+    .page-header
+      h1= title t '.title'
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .form-group
+        = f.email_field :email, class: 'form-control', placeholder: User.human_attribute_name(:email)
+      .form-group
+        = f.text_field :first_name, class: 'form-control', placeholder: User.human_attribute_name(:first_name)
+      .form-group
+        = f.text_field :last_name, class: 'form-control', placeholder: User.human_attribute_name(:last_name)  
+      .form-group
+        = f.date_field :birth_date, class: 'form-control', placeholder: User.human_attribute_name(:birth_date)
+      .form-group
+        b = t 'mongoid.attributes.user.group'
+        = f.input_field :group, collection: [[I18n.t('shared.groups.clinical'), :clinical],[I18n.t('shared.groups.occupational'), :occupational]], as: :radio_buttons
+      
+      .form-group        
+        b = t '.profile_url'
+        input#view_.form-control type="text" readonly="readonly" value="#{profile_url(current_user.view_token)}"
+        = f.input :reset_profile_url, as: :boolean
+        
+      .form-group
+        = f.submit t('.save'), class: 'btn btn-success btn-block', id: 'register_button'

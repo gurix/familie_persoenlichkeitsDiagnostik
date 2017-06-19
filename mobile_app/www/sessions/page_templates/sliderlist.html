@@ -1,0 +1,11 @@
+<div class="item item-divider item-text-wrap">
+  {{steps[step].title}}
+</div>
+<div ng-repeat="item in steps[step].items" id="item{{$index}}">
+  <div ng-init="answer = get_answer_for(item.key);">
+    <div class="item chinese_character" ng-show="answer.meta.char">{{answer.meta.char}}</div>
+    <div class="item">
+      <session-bipolar-slider value="answer.value" textleft="item.lower_value" textright="item.upper_value" recoded="answer.recoded === 1"></session-bipolar-slider>
+    </div>
+  </div>
+</div>
