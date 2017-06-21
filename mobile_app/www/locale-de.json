@@ -124,14 +124,13 @@
         "caption": "Situation"
     },
     "situations": {
-      "work": "Bei der Arbeit",
-      "recreation": "In der Freizeit / Erholung",
-      "family": "Bei der Familie",
-      "holidays": "In den Ferien",
-      "transportation": "Unterwegs (Auto/Tram/Bus/Zug/Flugzeug,…)"
-    },
-    "panava_implicit": {
-      "instruction": "Auf den ersten Blick mag es komisch erscheinen, chinesische Zeichen zu bewerten. Bisherige Forschung zeigte aber dass solche Bewertungen zu wichtigen/bedeutungsvollen Ergebnisse führen können, wenn Sie auf dem ersten Eindruck beruhen. Versuchen Sie einfach, so spontan wie möglich zu antworten."
+      "home": "Zuhause",
+      "playground": "Spielplatz",
+      "playing": "Gemeinsames Spiel/Aktivität",
+      "on_the_way": "Unterwegs",
+      "eating": "Beim Essen",
+      "bedtime": "Aufstehen oder Bettgeh-Situation",
+      "others": "Sonstiges (Bitte beschreiben Sie auf der nächsten Seite, wo sie sich zurzeit befinden.)"
     },
     "description_placeholder": "Bitte beschreiben Sie ihre aktuelle Situation in ein oder zwei Sätzen (optional)",
     "add_photo": "Photo aufnehmen",

@@ -128,7 +128,8 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
   $scope.steps.push({
     template: 'sliderlist',
     title: $scope.parenting_skills_questionnaire.title,
-    items: $scope.explicit_panava
+    items: $scope.parenting_skills,
+    scale: $scope.parenting_skills_questionnaire.scale
   });
   
   // Use a temporary item list hence we don't append all at once
@@ -144,6 +145,14 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
     };
     counter++;
   }
+
+  $scope.steps.push({
+    template: 'sliderlist',
+    title: $scope.parenting_basic_needs_questionnaire.title,
+    items: $scope.parenting_basic_needs,
+    scale: $scope.parenting_basic_needs_questionnaire.scale
+    
+  });
   
   for (var custom_fields_counter = 0; custom_fields_counter < $scope.available_custom_fields.length; custom_fields_counter++) {
     var custom_field = $scope.available_custom_fields[custom_fields_counter];
