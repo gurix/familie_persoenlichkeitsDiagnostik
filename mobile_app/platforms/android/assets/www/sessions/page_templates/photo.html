@@ -1,0 +1,15 @@
+<div  ng-controller="SessionsImageCapturingController">
+  <div class="item item-divider item-text-wrap">
+    {{'sessions.photo' | translate}}
+  </div>
+  <div class="item">
+    <button class="button button-block button-balanced button-outline" ng-click="addPicture()" ng-show="supportsCamera">{{'sessions.add_photo' | translate}}</button> 
+    <input type="file" custom-on-change="uploadFile" ng-hide="supportsCamera">
+  </div>
+  <div class="item item-image" ng-show="session.image">
+    <img class="session-image" ng-src="{{session.image}}"/>
+  </div>
+  <div class="item" ng-show="session.image">
+    <button class="button button-block button-assertive button-outline" ng-click="removePicture()">{{'sessions.remove_photo' | translate}}</button> 
+  </div>
+</div>

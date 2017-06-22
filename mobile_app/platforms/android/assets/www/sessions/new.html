@@ -1,0 +1,29 @@
+<ion-pane ng-controller="SessionsNewSessionController" id="sessions_new_session_controller">
+  <div>
+    <div class="bar bar-header bar-light">
+      <h1 class="title">{{'overview.add_session'| translate}} ({{step + 1}}/{{steps.length}})</h1>
+      <button class="button button-clear ion-close" ng-click="cancelNewSession()"></button>
+    </div>
+    <ion-content class="has-header">
+      <form name="form">
+        <div class="list">
+          <div id="step{{step}}" ng-include="'sessions/page_templates/' + steps[step].template + '.html'"></div>
+        
+          <div class="item">
+            <div class="button-bar">
+              <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="stepBack()" ng-show='step > 0'>    
+                {{"shared.back" | translate}}
+              </a>
+              <a class="button icon-right ion-chevron-right button-clear button-dark" ng-click="stepUp()" ng-show='showNext()'>    
+                {{"shared.next" | translate}}
+              </a>
+              <input type="submit" value="{{'shared.save' | translate}}" class="button icon-right ion-chevron-right button-clear button-positive" 
+                     ng-disabled="form.$invalid" ng-click="save(session)" id="save_new_situation" ng-show='step == steps.length - 1'/>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- <pre>{{steps | json}}</pre> -->
+    </ion-content>
+  </div>
+</ion-pane>

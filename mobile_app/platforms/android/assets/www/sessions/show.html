@@ -1,0 +1,41 @@
+<ion-pane ng-controller="SessionsDetailsController">
+  <div class="bar bar-header bar-light">
+    <a class="button icon ion-ios-arrow-left button-clear button-dark" ng-click="$ionicGoBack()"></a>
+    <h1 class="title">{{'situation.title'| translate}} {{'format.datetime.short'|translate:{date: toDate(session.started_at)} }}</h1>
+  </div>
+  <ion-content class="has-header">
+    <!-- <pre>{{session|json}}</pre> -->
+      
+    <div class="list">
+      <div class="item">
+      <h2>{{'situation.moment' | translate}}:</h2>
+      {{'format.datetime.short'|translate:{date: toDate(session.started_at)} }}
+      </div>
+      <div class="item">
+      <h2>{{'situation.situation' | translate}}:</h2>
+      {{'sessions.situations.' + session.situation | translate}}
+      </div>
+      <div class="item" ng-show="session.description">
+      <h2>{{'situation.description' | translate}}:</h2>
+      {{session.description}}
+      </div>
+      <div class="item item-image" ng-show="session.image">
+        <img ng-src="{{session.image}}">
+      </div>
+      <div class="item">
+        <h2>{{'questionary.mrs20.group_title' | translate}}</h2>
+        <session-chart session="session" chartid="'mrs20chart'" dimensions="mrs20_dimensions" labels='mrs20_dimension_labels'></session-chart>
+        
+      </div>
+      <div class="item">
+        <h2>{{'questionary.panava.group_title' | translate}}</h2>
+        <session-chart session="session" chartid="'panavachart'" dimensions="panava_dimensions" labels='panava_dimension_labels'></session-chart>
+      </div>
+      <div class="item" ng-show="custom_field_dimensions.length > 0">
+        <h2>{{'overview.custom_fields' | translate}}</h2>
+        
+        <session-chart session="session" chartid="'customfieldscharts'" dimensions="custom_field_dimensions" labels='custom_field_dimensions'></session-chart>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>

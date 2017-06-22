@@ -1,0 +1,38 @@
+<ion-pane>
+  <div class="bar bar-header bar-light">
+    <a class="button icon ion-ios-arrow-left button-clear button-dark" href="#/overview"></a>
+    <h1 class="title">{{'overview.my_data'| translate}}</h1>
+  </div>
+  <ion-content class="scroll-content has-header" ng-controller="IdentificationEditPersonalDataController">
+    <form name="form">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">{{'user.first_name' | translate}}</span>
+          <input type="text" ng-model="tmp_user.first_name" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">{{'user.last_name' | translate}}</span>
+          <input type="text" ng-model="tmp_user.last_name" required>
+        </label>
+        
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">{{'user.birth_date' | translate}}</span>
+          <input type="date" ng-model="tmp_user.birth_date" ng-change="console.log(tmp_user.birth_date)" required>
+        </label>
+        
+        <div class="item item-divider">{{'user.gender' | translate}}</div>
+        <ion-radio ng-model="tmp_user.gender" ng-value="0" name="gender"><i class="icon ion-female"></i> {{'user.genders.female' | translate}}</ion-radio>
+        <ion-radio ng-model="tmp_user.gender" ng-value="100" name="gender"><i class="icon ion-male"> {{'user.genders.male' | translate}}</i></ion-radio>
+        <ion-radio ng-model="tmp_user.gender" ng-value="50" name="gender"><i class="icon ion-transgender"> {{'user.genders.others' | translate}}</i></ion-radio>
+        
+        <div class="item item-divider">{{'user.group' | translate}}</div>
+        <ion-radio ng-model="tmp_user.group" ng-value="'clinical'" name="group" required>{{'user.groups.clinical' | translate}}</ion-radio>
+        <ion-radio ng-model="tmp_user.group" ng-value="'occupational'" name="group" required>{{'user.groups.occupational' | translate}}</i></ion-radio>
+        
+        <label class="item item-submit item-stacked-label">
+          <input type="submit" value="{{'shared.save' | translate}}" class="button button-positive button-block" ng-disabled="form.$invalid" ng-click="update()"/>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-pane>

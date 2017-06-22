@@ -1,0 +1,61 @@
+<ion-pane>
+  <div class="bar bar-header bar-light">
+    <h1 class="title">{{'overview.header.title' | translate}}</h1>
+  </div>
+  <ion-content class="has-header">
+    <ul class="list">
+      <a class="item item-icon-left item-icon-right" href="#sessions/new">
+        <i class="icon ion-ios-plus-outline"></i>
+        {{'overview.add_session' | translate}}
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      
+      <a class="item item-icon-left item-icon-right" href="#sessions/list">
+        <i class="icon ion-ios-list-outline"></i>
+        {{'overview.my_sessions' | translate}} ({{userService.sessions().length}})
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      
+      <a class="item item-icon-left item-icon-right" href="#sessions/profile">
+        <i class="icon ion-stats-bars"></i>
+        {{'overview.my_profile' | translate}}
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      
+      <a class="item item-icon-left item-icon-right" href="#user/edit_personal_data">
+        <i class="icon ion-person"></i>
+        {{'overview.my_data' | translate}}
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      
+      <a class="item item-icon-left item-icon-right"  href="#notifications">
+        <i class="icon ion-ios-alarm-outline"></i>
+        {{'overview.notifications' | translate}}
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      
+      <a class="item item-icon-left item-icon-right" href="#custom_fields">
+        <i class="icon ion-compass"></i>
+        {{'overview.custom_fields' | translate}}
+        <i class="icon ion-ios-arrow-right"></i>
+      </a>
+      
+      <a class="item item-icon-left" ng-click="sync()" ng-show="onlineStatus.onLine">
+        <i class="icon ion-android-sync"></i>
+        {{'overview.sync_my_data' | translate}} 
+        <span ng-show="is_syncing()">({{finished_syncs}}/{{pending_syncs}})</span>
+        <progress max="{{pending_syncs}}" value="{{finished_syncs}}" ng-show="is_syncing()"></progress>
+      </a>
+      
+      <div class="item item-icon-left disabled" ng-hide="onlineStatus.onLine">
+        <i class="icon ion-android-sync"></i>
+        {{'overview.sync_my_data' | translate}}
+      </div>
+      
+      <a class="item item-icon-left"  ng-click="sign_out()">
+        <i class="icon ion-log-out"></i>
+        {{'overview.sign_off' | translate}}
+      </a>
+    </ul>
+  </ion-content>
+</ion-pane>

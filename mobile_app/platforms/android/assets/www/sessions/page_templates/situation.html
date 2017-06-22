@@ -1,0 +1,10 @@
+<div class="item item-divider item-text-wrap">
+  {{'sessions.situation.empty_value' | translate}}
+</div>
+<ion-radio ng-model="session.situation" ng-value="'home'" ng-change="stepUp()">{{'sessions.situations.home' | translate}}</ion-radio>
+<ion-radio ng-model="session.situation" ng-value="'playground'" ng-change="stepUp()">{{'sessions.situations.playground' | translate}}</ion-radio>
+<ion-radio ng-model="session.situation" ng-value="'playing'" ng-change="stepUp()">{{'sessions.situations.playing' | translate}}</ion-radio>
+<ion-radio ng-model="session.situation" ng-value="'on_the_way'" ng-change="stepUp()">{{'sessions.situations.on_the_way' | translate}}</ion-radio>
+<ion-radio ng-model="session.situation" ng-value="'eating'" ng-change="stepUp()">{{'sessions.situations.eating' | translate}}</ion-radio>
+<ion-radio ng-model="session.situation" ng-value="'bedtime'" ng-change="stepUp()">{{'sessions.situations.bedtime' | translate}}</ion-radio>
+<ion-radio ng-model="session.situation" ng-value="'others'" ng-change="stepUp()" class="item-text-wrap">{{'sessions.situations.others' | translate}}</ion-radio>

@@ -1,0 +1,7 @@
+<div ng-show="onlineStatus.onLine">
+  <ion-nav-view/>
+</div>
+<div ng-hide="onlineStatus.onLine" class="online_state">
+  <ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>
+  <div>{{'shared.you_are_offline' | translate}}</div>
+</div>
