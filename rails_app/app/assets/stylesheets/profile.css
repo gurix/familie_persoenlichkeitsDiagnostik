@@ -22,53 +22,18 @@ g.col2 {
   stroke-dasharray: 10px;
 }
 
-g.mrs20_n {
+g.parenting_skills {
   stroke: #0066ff;
   fill: #0066ff;
   stroke-dasharray: none;
 }
 
-g.mrs20_e {
-  stroke: rgb(52, 168, 83);
-  fill: rgb(52, 168, 83);
-  stroke-dasharray: none;
-}
-
-g.mrs20_v {
+g.parenting_basic_needs {
   stroke: #ff8000;
   fill: #ff8000;
   stroke-dasharray: none;
 }
 
-g.mrs20_g {
-  stroke: #8000ff;
-  fill: #8000ff;
-  stroke-dasharray: none;
-}
-
-g.mrs20_k {
-  stroke: rgb(251, 188, 5);
-  fill: rgb(251, 188, 5);
-  stroke-dasharray: none;
-}
-
-g.panava_pa {
-  stroke: rgb(52, 168, 83);
-  stroke-dasharray: 2px;
-  fill: rgb(52, 168, 83);
-}
-
-g.panava_na {
-  stroke: #0066ff;
-  stroke-dasharray: 2px;
-  fill: #0066ff;
-}
-
-g.panava_va {
-  stroke: #ff0000;
-  stroke-dasharray: 2px;
-  fill:  #ff0000;
-}
 @media (max-width : 1024px) {
   session-chart .ct-label.ct-horizontal {
     font-size: 1.5vw;
