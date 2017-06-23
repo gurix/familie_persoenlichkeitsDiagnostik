@@ -13,8 +13,7 @@ describe Api::V1::UsersController do
                          first_name: 'Toni',
                          last_name:  'Brunner',
                          gender:     12,
-                         birth_date: Date.new(1974, 8, 23),
-                         group:       'clinical'
+                         birth_date: Date.new(1974, 8, 23)
 
     get :show, params: { user_token: user.authentication_token, user_email: user.email }
 
@@ -28,7 +27,6 @@ describe Api::V1::UsersController do
     expect(result['gender']).to eq 12
     expect(result['birth_date']).to eq '1974-08-23T00:00:00.000Z'
     expect(result['updated_at']).to eq '2013-05-06'
-    expect(result['group']).to eq 'clinical'
   end
 
   it 'updates an existing user' do
@@ -39,15 +37,13 @@ describe Api::V1::UsersController do
                          first_name: 'Toni',
                          last_name:  'Brunner',
                          gender:     12,
-                         birth_date: Date.new(1974, 8, 23),
-                         group:       'clinical'
+                         birth_date: Date.new(1974, 8, 23)
 
     changes = {
       first_name: 'Walter',
       last_name:  'Müller',
       gender:     70,
-      birth_date: Date.new(1984, 4, 12),
-      group:       'abcdefg'
+      birth_date: Date.new(1984, 4, 12)
     }
 
     put :update, params: { user: changes, user_token: user.authentication_token, user_email: user.email }
@@ -62,6 +58,5 @@ describe Api::V1::UsersController do
     expect(result['gender']).to eq 70
     expect(result['birth_date']).to eq '1984-04-12T00:00:00.000Z'
     expect(result['updated_at']).to eq '2013-05-06'
-    expect(result['group']).to eq 'abcdefg'
   end
 end

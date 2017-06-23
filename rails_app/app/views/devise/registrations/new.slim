@@ -21,9 +21,6 @@
       .form-group
         = f.date_field :birth_date, class: 'form-control', placeholder: User.human_attribute_name(:birth_date)
       .form-group
-        b = t 'mongoid.attributes.user.group'
-        = f.input_field :group, collection: [[I18n.t('shared.groups.clinical'), :clinical],[I18n.t('shared.groups.occupational'), :occupational]], as: :radio_buttons
-      .form-group
         = link_to t('.accept_terms_and_conditions'), terms_and_conditions_path
       .form-group
         = f.submit t('.sign_up'), class: 'btn btn-success btn-block', id: 'register_button'

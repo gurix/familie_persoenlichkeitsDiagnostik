@@ -13,8 +13,6 @@ feature 'Registration' do
     fill_in 'Vorname', with: 'Hans'
     fill_in 'Nachname', with: 'Muster'
 
-    choose 'Gruppe A'
-
     fill_in 'Geburtsdatum', with: '12.12.1988'
 
     click_button 'Registrieren'

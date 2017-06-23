@@ -6,7 +6,6 @@ describe User do
   it { is_expected.to validate_presence_of(:last_name) }
   it { is_expected.to validate_presence_of(:gender) }
   it { is_expected.to validate_presence_of(:birth_date) }
-  it { is_expected.to validate_presence_of(:group) }
 
   it { expect(subject).to validate_uniqueness_of(:view_token) }
 

@@ -52,7 +52,6 @@ module Api
                                         :situation,
                                         :description,
                                         :version,
-                                        :group,
                                         :deleted_at,
                                         gps_position: [:lat, :long],
                                         answers: answer_fields)

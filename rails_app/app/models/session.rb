@@ -14,14 +14,12 @@ class Session
   field :image,          type: String
   field :description,    type: String
   field :gps_position,   type: Hash
-  field :group,          type: String
 
   validates :started_at, presence: true
   validates :local_id,   presence: true
   validates :local_id,   uniqueness: { scope: :user_id }
   validates :situation,  presence: true
   validates :version,    presence: true
-  validates :group,      presence: true
 
   index started_at: 1
 end

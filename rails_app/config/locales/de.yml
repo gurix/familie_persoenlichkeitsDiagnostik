@@ -34,10 +34,6 @@ de:
         change_password: Passwort ändern
   
   shared:
-    groups:
-      clinical: Gruppe A
-      occupational: Gruppe B
-      
     situations:
       work: Bei der Arbeit
       recreation: In der Freizeit / Erholung

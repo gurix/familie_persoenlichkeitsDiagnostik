@@ -7,6 +7,5 @@ FactoryGirl.define do
     last_name { Faker::Name.last_name }
     gender { Random }
     birth_date { Faker::Date.backward(3650) }
-    group { %w(clinical occupational).sample }
   end
 end
