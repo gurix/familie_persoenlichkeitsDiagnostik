@@ -24,8 +24,6 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     find('.item', text: 'Andere').click
 
-    find('.item', text: 'Gruppe B').click
-
     click_button 'Weiter'
 
     expect(page).to have_content 'Persönlichkeitsdiagnostik'

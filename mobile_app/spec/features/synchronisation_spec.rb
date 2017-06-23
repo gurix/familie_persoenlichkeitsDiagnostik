@@ -37,8 +37,8 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
   scenario 'It changes the user locally when the user changes remotely' do
     user = { first_name: 'Puffel',
              last_name: 'Knuffel',
-             gender: 12,
-             group: 'occupational' }
+             gender: 12 
+           }
 
     Net::HTTP.start('localhost', 3000) do |http|
       http.put("/api/v1/user?user_email=#{@current_user_email}&user_token=#{@current_user_token}", { user: user }.to_http_params)
@@ -59,8 +59,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       local_id: 'ABCDE',
       user_id: @current_user_id,
       version: 0,
-      situation: 'work',
-      group: 'occupational'
+      situation: 'work'
     }
 
     page.execute_script "angular.element(document.body).scope().sessions.push(#{session.to_json})"
@@ -82,8 +81,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'It comes from the server',
-      group: 'occupational'
+      description: 'It comes from the server'
     }
 
     Net::HTTP.start('localhost', 3000) do |http|
@@ -104,8 +102,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'This is newer',
-      group: 'occupational'
+      description: 'This is newer'
     }
 
     Net::HTTP.start('localhost', 3000) do |http|
@@ -125,8 +122,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'This is older',
-      group: 'occupational'
+      description: 'This is older'
     }
 
     page.execute_script "angular.element(document.body).scope().sessions.push(#{local_session.to_json})"
@@ -147,8 +143,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'This is older',
-      group: 'occupational'
+      description: 'This is older'
     }
 
     Net::HTTP.start('localhost', 3000) do |http|
@@ -168,8 +163,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'This is newer',
-      group: 'occupational'
+      description: 'This is newer'
     }
 
     page.execute_script "angular.element(document.body).scope().sessions.push(#{local_session.to_json})"
@@ -191,8 +185,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'This is older',
-      group: 'occupational'
+      description: 'This is older'
     }
 
     Net::HTTP.start('localhost', 3000) do |http|
@@ -213,8 +206,7 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
       user_id: @current_user_id,
       version: 0,
       situation: 'work',
-      description: 'This is newer',
-      group: 'occupational'
+      description: 'This is newer'
     }
 
     page.execute_script "angular.element(document.body).scope().sessions.push(#{local_session.to_json})"

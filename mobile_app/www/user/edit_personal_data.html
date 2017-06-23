@@ -25,10 +25,6 @@
         <ion-radio ng-model="tmp_user.gender" ng-value="100" name="gender"><i class="icon ion-male"> {{'user.genders.male' | translate}}</i></ion-radio>
         <ion-radio ng-model="tmp_user.gender" ng-value="50" name="gender"><i class="icon ion-transgender"> {{'user.genders.others' | translate}}</i></ion-radio>
         
-        <div class="item item-divider">{{'user.group' | translate}}</div>
-        <ion-radio ng-model="tmp_user.group" ng-value="'clinical'" name="group" required>{{'user.groups.clinical' | translate}}</ion-radio>
-        <ion-radio ng-model="tmp_user.group" ng-value="'occupational'" name="group" required>{{'user.groups.occupational' | translate}}</i></ion-radio>
-        
         <label class="item item-submit item-stacked-label">
           <input type="submit" value="{{'shared.save' | translate}}" class="button button-positive button-block" ng-disabled="form.$invalid" ng-click="update()"/>
         </label>

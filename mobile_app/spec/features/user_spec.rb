@@ -17,7 +17,6 @@ RSpec.describe 'User', js: true, type: :feature do
 
     find('.item', text: 'Andere').click
 
-    find('.item', text: 'Gruppe B').click
 
     sleep 1
     click_button 'Speichern'

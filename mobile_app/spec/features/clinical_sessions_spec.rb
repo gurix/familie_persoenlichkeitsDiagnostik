@@ -35,8 +35,6 @@ RSpec.describe 'clinical sessions', js: true, type: :feature do
 
     expect(page.evaluate_script('angular.element(document.body).scope().sessions.length')).to eq 0
 
-    expect(page.evaluate_script('angular.element(document.getElementById("sessions_new_session_controller")).scope().session.group')).to eq 'clinical'
-
     5.times do
       touch_action '#item0 .noUi-handle', :flick, axis: 'x', distance: 1000, duration: 50
       sleep 0.5
@@ -120,6 +118,5 @@ RSpec.describe 'clinical sessions', js: true, type: :feature do
     expect(page.evaluate_script('angular.element(document.body).scope().sessions[0].situation')).to eq 'family'
     expect(page.evaluate_script('angular.element(document.body).scope().sessions[0].user_id')).to eq @current_user_id
     expect(page.evaluate_script('angular.element(document.body).scope().sessions[0].description')).to eq 'Keep calm and carry on'
-    expect(page.evaluate_script('angular.element(document.body).scope().sessions[0].group')).to eq 'clinical'
   end
 end
