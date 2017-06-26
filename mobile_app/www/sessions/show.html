@@ -23,13 +23,8 @@
         <img ng-src="{{session.image}}">
       </div>
       <div class="item">
-        <h2>{{'questionary.mrs20.group_title' | translate}}</h2>
-        <session-chart session="session" chartid="'mrs20chart'" dimensions="mrs20_dimensions" labels='mrs20_dimension_labels'></session-chart>
-        
-      </div>
-      <div class="item">
-        <h2>{{'questionary.panava.group_title' | translate}}</h2>
-        <session-chart session="session" chartid="'panavachart'" dimensions="panava_dimensions" labels='panava_dimension_labels'></session-chart>
+        <h2>{{'questionary.group_title' | translate}}</h2>
+        <session-chart session="session" chartid="'parentingchart'" dimensions="dimensions" labels='dimension_labels'></session-chart>
       </div>
       <div class="item" ng-show="custom_field_dimensions.length > 0">
         <h2>{{'overview.custom_fields' | translate}}</h2>

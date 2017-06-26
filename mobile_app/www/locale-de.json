@@ -85,20 +85,9 @@
     "password_to_short": "Das Passwort ist zu kurz, bitte verwenden Sie mehr als 4 Zeichen."  
   },
   "questionary": {
-    "mrs20": {
-      "group_title": "Die 5 Dimensionen der Persönlichkeit",
-      "neuroticism": "Neurotizismus",
-      "extraversion": "Extraversion",
-      "agreeableness": "Verträglichkeit",
-      "conscience": "Gewissenhaftigkeit",
-      "openness": "Offenheit/Intellekt"
-    },
-    "panava": {
-      "group_title": "Positive Aktivierung, Negative Aktivierung und Valenz",
-      "positive_affect": "Positiver Affekt",
-      "negative_affect": "Negativer Affekt",
-      "valence": "Zufriedenheit / Glück"
-    },
+    "group_title": "Beziehung und Erziehungskompetenz",
+    "parenting_basic_needs": "Beziehung",
+    "parenting_skills": "Erziehungskompetenz",
     "filter": {
       "group_title": "Filter",
       "none": "Alle anzeigen",

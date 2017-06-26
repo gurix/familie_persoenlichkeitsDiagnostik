@@ -9,21 +9,12 @@ app.controller('SessionsDetailsController', function($scope, $stateParams, $tran
     }
   });
   
-  $scope.mrs20_dimensions = ['mrs20_n', 'mrs20_e', 'mrs20_v', 'mrs20_g', 'mrs20_k'];
-  $translate(['questionary.mrs20.neuroticism', 'questionary.mrs20.extraversion', 'questionary.mrs20.agreeableness', 'questionary.mrs20.conscience', 'questionary.mrs20.openness'])
+  $scope.dimensions = ['parenting_basic_needs', 'parenting_skills'];
+  $translate(['questionary.parenting_basic_needs', 'questionary.parenting_skills'])
   .then(function (translations) {
-    $scope.mrs20_dimension_labels = [];
+    $scope.dimension_labels = [];
     angular.forEach(translations, function(element) {
-      $scope.mrs20_dimension_labels.push(element);
-    });
-  });
-  
-  $scope.panava_dimensions = ['panava_pa', 'panava_na', 'panava_va'];
-  $translate(['questionary.panava.positive_affect', 'questionary.panava.negative_affect', 'questionary.panava.valence'])
-  .then(function (translations) {
-    $scope.panava_dimension_labels = [];
-    angular.forEach(translations, function(element) {
-      $scope.panava_dimension_labels.push(element);
+      $scope.dimension_labels.push(element);
     });
   });
   
