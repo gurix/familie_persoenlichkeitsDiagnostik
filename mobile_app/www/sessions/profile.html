@@ -10,80 +10,24 @@
       </div>
       <div class="col">
         <ion-list>
-          <div class="item item-divider item-icon-right" ng-click="is_mr20_open = !is_mr20_open">
-            <i class="icon ion-chevron-up" ng-show="is_mr20_open"></i>
-            <i class="icon ion-chevron-down" ng-hide="is_mr20_open"></i>
-            {{'questionary.mrs20.group_title' | translate}}
+          <div class="item item-divider item-icon-right">
+            {{'questionary.group_title' | translate}}
           </div>
-          <ion-checkbox ng-model="display.mrs20_e" ng-change="re_aggregate()" ng-show="is_mr20_open">
+          <ion-checkbox ng-model="display.parenting_skills" ng-change="re_aggregate()">
             <svg width="100" height="10">
-              <g class="ct-series mrs20_e">
+              <g class="ct-series parenting_skills">
                 <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
               </g>
             </svg>
-            {{'questionary.mrs20.extraversion' | translate}}
+            {{'questionary.parenting_skills' | translate}}
           </ion-checkbox>
-          <ion-checkbox ng-model="display.mrs20_n" ng-change="re_aggregate()" ng-show="is_mr20_open">
+          <ion-checkbox ng-model="display.parenting_basic_needs" ng-change="re_aggregate()">
             <svg width="100" height="10">
-              <g class="ct-series mrs20_n">
+              <g class="ct-series parenting_basic_needs">
                 <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
               </g>
             </svg>
-            {{'questionary.mrs20.neuroticism' | translate}}
-          </ion-checkbox>
-          <ion-checkbox ng-model="display.mrs20_v" ng-change="re_aggregate()" ng-show="is_mr20_open">
-            <svg width="100" height="10">
-              <g class="ct-series mrs20_v">
-                <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
-              </g>
-            </svg>
-            {{'questionary.mrs20.agreeableness' | translate}}
-          </ion-checkbox>
-          <ion-checkbox ng-model="display.mrs20_g" ng-change="re_aggregate()" ng-show="is_mr20_open">
-            <svg width="100" height="10">
-              <g class="ct-series mrs20_g">
-                <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
-              </g>
-            </svg>
-            {{'questionary.mrs20.conscience' | translate}}
-          </ion-checkbox>
-          <ion-checkbox ng-model="display.mrs20_k" ng-change="re_aggregate()" ng-show="is_mr20_open">
-            <svg width="100" height="10">
-              <g class="ct-series mrs20_k">
-                <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
-              </g>
-            </svg>
-            {{'questionary.mrs20.openness' | translate}}
-          </ion-checkbox>
-          
-          <div class="item item-divider item-icon-right"  ng-click="is_panava_open = !is_panava_open">
-            <i class="icon ion-chevron-up" ng-show="is_panava_open"></i>
-            <i class="icon ion-chevron-down" ng-hide="is_panava_open"></i>
-           {{'questionary.panava.group_title' | translate}}
-          </div>
-          <ion-checkbox ng-model="display.panava_pa" ng-change="re_aggregate()" ng-show="is_panava_open">
-            <svg width="100" height="10">
-              <g class="ct-series panava_pa">
-                <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
-              </g>
-            </svg>
-            {{'questionary.panava.positive_affect' | translate}}
-          </ion-checkbox>
-          <ion-checkbox ng-model="display.panava_na" ng-change="re_aggregate()" ng-show="is_panava_open">
-            <svg width="100" height="10">
-              <g class="ct-series panava_na">
-                <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
-              </g>
-            </svg>
-            {{'questionary.panava.negative_affect' | translate}}
-          </ion-checkbox>
-          <ion-checkbox ng-model="display.panava_va" ng-change="re_aggregate()" ng-show="is_panava_open">
-            <svg width="100" height="10">
-              <g class="ct-series panava_va">
-                <line x1="0" y1="5" x2="100" y2="5" class="ct-line"/>
-              </g>
-            </svg>
-            {{'questionary.panava.valence' | translate}}
+            {{'questionary.parenting_basic_needs' | translate}}
           </ion-checkbox>
           
           <div class="item item-divider item-icon-right" ng-show="custom_field_dimensions.length > 0"  ng-click="is_custom_field_open = !is_custom_field_open">

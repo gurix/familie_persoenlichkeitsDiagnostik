@@ -9,7 +9,7 @@ app.controller('SessionsDetailsController', function($scope, $stateParams, $tran
     }
   });
   
-  $scope.dimensions = ['parenting_basic_needs', 'parenting_skills'];
+  $scope.dimensions = ['parenting_skills', 'parenting_basic_needs'];
   $translate(['questionary.parenting_basic_needs', 'questionary.parenting_skills'])
   .then(function (translations) {
     $scope.dimension_labels = [];
