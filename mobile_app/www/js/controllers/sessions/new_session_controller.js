@@ -116,7 +116,7 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
   for (var parenting_skills_counter = 0; parenting_skills_counter < $scope.parenting_skills.length; parenting_skills_counter++) { 
     // Set default values
     $scope.session.answers[counter] = {
-      recoded: 0,
+      recoded: $scope.parenting_skills[parenting_skills_counter].recoded,
       key: $scope.parenting_skills[parenting_skills_counter].key,
       position: parenting_skills_counter,
       value: 0, 
