@@ -20,8 +20,6 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
     fill_in 'Geburtsdatum', with: '12121999'
     sleep 1
 
-    find('.item', text: 'Gruppe B').click
-
     click_button 'Speichern'
 
     page.find('a', text: 'Meine Daten synchronisieren').click
@@ -31,7 +29,6 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
 
     expect(result).to have_content 'Peter'
     expect(result).to have_content 'Griffin'
-    expect(result).to have_content 'occupational'
   end
 
   scenario 'It changes the user locally when the user changes remotely' do
@@ -50,7 +47,6 @@ RSpec.describe 'Synchronisation', js: true, type: :feature do
     expect(page.evaluate_script('angular.element(document.body).scope().user.first_name')).to eq 'Puffel'
     expect(page.evaluate_script('angular.element(document.body).scope().user.last_name')).to eq 'Knuffel'
     expect(page.evaluate_script('angular.element(document.body).scope().user.gender')).to eq 12
-    expect(page.evaluate_script('angular.element(document.body).scope().user.group')).to eq 'occupational'
   end
 
   scenario 'It uploads a situation when it does not exist on the server' do

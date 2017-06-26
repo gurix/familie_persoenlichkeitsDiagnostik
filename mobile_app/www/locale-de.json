@@ -71,11 +71,6 @@
       "others": "Andere",
       "male": "Männlich"
     },
-    "group": "Stichprobe",
-    "groups": {
-      "clinical": "Gruppe A",
-      "occupational": "Gruppe B"
-    },
     "send_password": "Ich habe mein Passwort vergessen",
     "password_sent": "Sie erhalten in wenigen Minuten eine E-Mail mit der Anleitung, wie Sie Ihr Passwort zurücksetzen können."
   },
