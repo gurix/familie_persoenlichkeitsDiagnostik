@@ -26,7 +26,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Persönlichkeitsdiagnostik'
+    expect(page).to have_content 'Beziehung und Erziehungskompetenz'
   end
 
   scenario 'signs out and sign in again' do
@@ -36,7 +36,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Ok'
 
-    expect(page).to have_content 'Mit Hilfe von Persönlichkeitsdiagnostik'
+    expect(page).to have_content 'Mit Hilfe von Beziehung und Erziehungskompetenz'
 
     fill_in 'E-Mail', with: 'hans@muster.ch'
 
@@ -46,6 +46,6 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Persönlichkeitsdiagnostik'
+    expect(page).to have_content 'Beziehung und Erziehungskompetenz'
   end
 end
