@@ -1,7 +1,7 @@
 var Questionnaires = Questionnaires || {}; 
 
 Questionnaires.GermanParentingSkills = function() {
-  this.title = 'Beschreiben sie die aktuelle Situation:';
+  this.title = 'Beschreiben Sie die aktuelle Situation:';
 
   this.scale = {
     left: 'stimme überhaupt nicht zu',
