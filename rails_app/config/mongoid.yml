@@ -1,14 +1,14 @@
 development:
   clients:
     default:
-      database: persoenlichkeitsDiagnostik_dev
+      database: familie_persoenlichkeitsDiagnostik_dev
       hosts:
         - localhost:27017
 
 test:
   clients:
     default:
-      database: persoenlichkeitsDiagnostik_test
+      database: familie_persoenlichkeitsDiagnostik_test
       hosts:
         - localhost:27017
 
