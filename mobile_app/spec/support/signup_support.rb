@@ -35,5 +35,5 @@ def register_user
 
   click_button 'Weiter'
 
-  expect(page).to have_content 'Beziehung und Erziehungskompetenz'
+  expect(page).to have_content 'Erziehungskompetenz und Grundbedürfnisse'
 end

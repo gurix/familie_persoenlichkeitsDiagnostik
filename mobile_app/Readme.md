@@ -1,4 +1,4 @@
-# Beziehung und Erziehungskompetenz mobile application
+# Erziehungskompetenz und elterlichen Grundbedürfnisse mobile application
 
 ## Database
 We are using Mongoid as backend database. Ensure you have a mongodb server running during development and testing.

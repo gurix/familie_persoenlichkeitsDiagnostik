@@ -26,7 +26,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Beziehung und Erziehungskompetenz'
+    expect(page).to have_content 'Erziehungskompetenz und Grundbedürfnisse'
   end
 
   scenario 'signs out and sign in again' do
@@ -36,7 +36,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Ok'
 
-    expect(page).to have_content 'Mit Hilfe von Beziehung und Erziehungskompetenz'
+    expect(page).to have_content 'Mit Hilfe dieser App können Sie zu verschiedenen Tageszeiten Ihre aktuelle Erziehungskompetenz und Ihre elterlichen Grundbedürfnisse erfassen. '
 
     fill_in 'E-Mail', with: 'hans@muster.ch'
 
@@ -46,6 +46,6 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Beziehung und Erziehungskompetenz'
+    expect(page).to have_content 'Erziehungskompetenz und Grundbedürfnisse'
   end
 end

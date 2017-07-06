@@ -116,7 +116,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
           if (window.cordova) {
             $cordovaLocalNotification.schedule({
                id: i,
-               title: 'Beziehung und Erziehungskompetenz',
+               title: 'Erziehungskompetenz und elterlichen Grundbedürfnisse',
                text: title,
                at: new Date(date)
              });
@@ -135,7 +135,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
     if (window.cordova) {
       $cordovaLocalNotification.schedule({
         id: 666,
-        title: 'Beziehung und Erziehungskompetenz',
+        title: 'Erziehungskompetenz und elterlichen Grundbedürfnisse',
         text: "Diese Mitteilung erscheint als Test nach 5 Sekunden.",
 
         at: _5_sec_from_now
