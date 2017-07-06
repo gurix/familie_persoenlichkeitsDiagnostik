@@ -66,8 +66,7 @@ RSpec.describe 'sessions', js: true, type: :feature do
 
     expect(page).to have_content 'You shall delete it'
 
-    touch_action '#ABCDE', :tap # Simulate sliding left needs initial tap
-    sleep 1
+    sleep 2
     touch_action '#ABCDE', :swipe, axis: 'x', distance: -200, duration: 50
 
     find('#ABCDE ion-option-button').click
