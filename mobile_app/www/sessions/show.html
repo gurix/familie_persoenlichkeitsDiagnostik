@@ -23,8 +23,12 @@
         <img ng-src="{{session.image}}">
       </div>
       <div class="item">
-        <h2>{{'questionary.group_title' | translate}}</h2>
-        <session-chart session="session" chartid="'parentingchart'" dimensions="dimensions" labels='dimension_labels'></session-chart>
+        <h2>{{'questionary.parenting_competences.title' | translate}}</h2>
+        <session-chart session="session" chartid="'competences_chart'" dimensions="competences_dimensions" labels='competences_dimension_labels'></session-chart>
+      </div>
+      <div class="item">
+        <h2>{{'questionary.parenting_basic_needs.title' | translate}}</h2>
+        <session-chart session="session" chartid="'basic_needs_chart'" dimensions="basic_needs_dimensions" labels='basic_needs_dimension_labels'></session-chart>
       </div>
       <div class="item" ng-show="custom_field_dimensions.length > 0">
         <h2>{{'overview.custom_fields' | translate}}</h2>

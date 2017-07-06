@@ -9,12 +9,21 @@ app.controller('SessionsDetailsController', function($scope, $stateParams, $tran
     }
   });
   
-  $scope.dimensions = ['parenting_skills', 'parenting_basic_needs'];
-  $translate(['questionary.parenting_basic_needs', 'questionary.parenting_skills'])
+  $scope.competences_dimensions = ['parenting_competences_self_efficacy', 'parenting_competences_satisfaction'];
+  $translate(['questionary.parenting_competences.self_efficacy', 'questionary.parenting_competences.satisfaction'])
   .then(function (translations) {
-    $scope.dimension_labels = [];
+    $scope.competences_dimension_labels = [];
     angular.forEach(translations, function(element) {
-      $scope.dimension_labels.push(element);
+      $scope.competences_dimension_labels.push(element);
+    });
+  });
+
+  $scope.basic_needs_dimensions = ['parenting_basic_needs_bonding', 'parenting_basic_needs_self_esteem', 'parenting_basic_needs_control', 'parenting_basic_needs_autonomy'];
+  $translate(['questionary.parenting_basic_needs.bonding', 'questionary.parenting_basic_needs.self_esteem', 'questionary.parenting_basic_needs.control', 'questionary.parenting_basic_needs.autonomy'])
+  .then(function (translations) {
+    $scope.basic_needs_dimension_labels = [];
+    angular.forEach(translations, function(element) {
+      $scope.basic_needs_dimension_labels.push(element);
     });
   });
   

@@ -85,9 +85,18 @@
     "password_to_short": "Das Passwort ist zu kurz, bitte verwenden Sie mehr als 4 Zeichen."  
   },
   "questionary": {
-    "group_title": "Beziehung und Erziehungskompetenz",
-    "parenting_basic_needs": "Beziehung",
-    "parenting_skills": "Erziehungskompetenz",
+    "parenting_competences": {
+      "title": "Elterliche Erziehungskompetenz",
+      "self_efficacy": "Selbstwirksamkeit/Kompetenz",
+      "satisfaction": "Zufriedenheit"
+    },
+    "parenting_basic_needs": {
+      "title": "Grundbedürfnisse",
+      "bonding":"Bindung",
+      "self_esteem":"Selbstwert",
+      "control":"Kontrolle",
+      "autonomy":"Autonomie"
+    },
     "filter": {
       "group_title": "Filter",
       "none": "Alle anzeigen",

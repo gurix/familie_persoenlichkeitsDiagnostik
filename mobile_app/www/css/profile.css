@@ -24,17 +24,42 @@ g.col2 {
   stroke-dasharray: 10px;
 }
 
-g.parenting_skills {
+g.parenting_competences_self_efficacy {
   stroke: #0066ff;
   fill: #0066ff;
   stroke-dasharray: none;
 }
 
-g.parenting_basic_needs {
+g.parenting_competences_satisfaction {
   stroke: rgb(52, 168, 83);
   fill: rgb(52, 168, 83);
   stroke-dasharray: none;
 }
+
+g.parenting_basic_needs_bonding {
+  stroke: #0066ff;
+  fill: #0066ff;
+  stroke-dasharray: 2;
+}
+
+g.parenting_basic_needs_self_esteem {
+  stroke: rgb(52, 168, 83);
+  fill: rgb(52, 168, 83);
+  stroke-dasharray: 2;
+}
+
+g.parenting_basic_needs_control {
+  stroke: orange;
+  fill: orange;
+  stroke-dasharray: 2;
+}
+
+g.parenting_basic_needs_autonomy {
+  stroke: red;
+  fill: red;
+  stroke-dasharray: 2;
+}
+
 
 
 @media (max-width : 1024px) {

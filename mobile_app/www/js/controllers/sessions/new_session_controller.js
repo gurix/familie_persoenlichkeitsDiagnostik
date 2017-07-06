@@ -95,15 +95,15 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
   explicit_mrs_per_page = 5;
   
   // Initiate questionar
-  $scope.parenting_skills_questionnaire = new Questionnaires.GermanParentingSkills();
+  $scope.parenting_competences_questionnaire = new Questionnaires.GermanParentingCompetences();
   $scope.parenting_basic_needs_questionnaire = new Questionnaires.GermanParentingBasicNeeds();
 
   // Assign questionnaire data 
-  $scope.parenting_skills = $scope.parenting_skills_questionnaire.items;
+  $scope.parenting_competences = $scope.parenting_competences_questionnaire.items;
   $scope.parenting_basic_needs = $scope.parenting_basic_needs_questionnaire.items;
   
   // Shuffle items
-  $scope.parenting_skills = shuffle($scope.parenting_skills);
+  $scope.parenting_competences = shuffle($scope.parenting_competences);
   $scope.parenting_basic_needs = shuffle($scope.parenting_basic_needs);
   
   // For each new sesion we recode some items randomly to be sure
@@ -113,12 +113,12 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
   $scope.steps = [];
   
   var counter = 0;
-  for (var parenting_skills_counter = 0; parenting_skills_counter < $scope.parenting_skills.length; parenting_skills_counter++) { 
+  for (var parenting_competences_counter = 0; parenting_competences_counter < $scope.parenting_competences.length; parenting_competences_counter++) { 
     // Set default values
     $scope.session.answers[counter] = {
-      recoded: $scope.parenting_skills[parenting_skills_counter].recoded,
-      key: $scope.parenting_skills[parenting_skills_counter].key,
-      position: parenting_skills_counter,
+      recoded: $scope.parenting_competences[parenting_competences_counter].recoded,
+      key: $scope.parenting_competences[parenting_competences_counter].key,
+      position: parenting_competences_counter,
       value: 0, 
       recoded_value: 0
     };
@@ -127,9 +127,9 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
   
   $scope.steps.push({
     template: 'sliderlist',
-    title: $scope.parenting_skills_questionnaire.title,
-    items: $scope.parenting_skills,
-    scale: $scope.parenting_skills_questionnaire.scale
+    title: $scope.parenting_competences_questionnaire.title,
+    items: $scope.parenting_competences,
+    scale: $scope.parenting_competences_questionnaire.scale
   });
   
   // Use a temporary item list hence we don't append all at once
