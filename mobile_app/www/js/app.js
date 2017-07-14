@@ -1,8 +1,8 @@
 app = angular.module('ionicApp', ['ionic', 'pascalprecht.translate', 'ngCordova', 'LocalForageModule', 'ya.nouislider'])
 
 .constant("appConfig", {
-  //"backend_server": "http://familie.persoenlichkeitsdiagnostik.ch"
-  "backend_server": "http://localhost:3000"
+  "backend_server": "http://familie.persoenlichkeitsdiagnostik.ch"
+  // "backend_server": "http://localhost:3000"
 })
 
 // Directive to validate to compare two fields i.o password and password_confirmation

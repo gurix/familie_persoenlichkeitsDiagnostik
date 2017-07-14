@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ch.zhaw.iap.family_persoenlichkeitsdiagnostik" ios_CFBundleIdentifier="ch.zhaw.iap.family_persoenlichkeitsdiagnostik" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Erziehungskompetenz und elterlichen Grundbedürfnisse</name>
+<widget id="ch.zhaw.iap.parentingdiagnostics" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Erziehungskompetenz und elterliche Grundbedürfnisse</name>
   <description>
-      Die Erziehungskompetenz und elterlichen Grundbedürfnisse wird mittels Erlebens-Stichproben Methode (Experience Sampling Method, ESM) erhoben.
+      Die Erziehungskompetenz und elterliche Grundbedürfnisse wird mittels Erlebens-Stichproben Methode (Experience Sampling Method, ESM) erhoben.
     </description>
   <author email="markus.graf@zhaw.ch" href="http://www.iap.zhaw.ch/">IAP Institut für Angewandte Psychologie</author>
   <content src="index.html"/>
