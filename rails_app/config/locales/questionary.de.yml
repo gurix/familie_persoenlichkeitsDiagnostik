@@ -1,7 +1,14 @@
 de:
   questionary:
-    title: Kompetenzen
-    parenting_skills: Erziehungskompetenz
-    parenting_basic_needs: Grundbedürfnisse / Beziehung
+    parenting_competences:
+      title: Elterliche Erziehungskompetenz
+      self_efficacy: Selbstwirksamkeit/Kompetenz
+      satisfaction: Zufriedenheit
+    parenting_basic_needs:
+      title: Grundbedürfnisse
+      bonding: Bindung
+      self_esteem: Selbstwert
+      control: Kontrolle
+      autonomy: Autonomie
+
     custom_fields: Entwicklungsgedanken
-    
