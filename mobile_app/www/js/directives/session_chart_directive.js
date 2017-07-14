@@ -43,7 +43,6 @@ app.directive('sessionChart', function($timeout) {
               labels: scope.labels,
               series: series
             }, { 
-              distributeSeries: true,
               high: 50,
               low: -50,
               axisY: {
