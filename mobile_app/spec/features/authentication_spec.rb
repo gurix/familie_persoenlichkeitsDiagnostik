@@ -26,7 +26,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Erziehungskompetenz und Grundbedürfnisse'
+    expect(page).to have_content 'Elternsein im Fokus'
   end
 
   scenario 'signs out and sign in again' do
@@ -36,7 +36,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Ok'
 
-    expect(page).to have_content 'Mit Hilfe dieser App können Sie zu verschiedenen Tageszeiten Ihre aktuelle Erziehungskompetenz und Ihre elterlichen Grundbedürfnisse erfassen. '
+    expect(page).to have_content 'Mit Hilfe dieser Diagnostik-App erfassen Sie zu verschiedenen Tageszeiten Ihre elterlichen Bedürfnisse und ihr Kompetenzgefühl. Die App ist zur Unterstützung des Beratungsprozesses entwickelt worden und soll auch in die Beratung eingebettet werden.'
 
     fill_in 'E-Mail', with: 'hans@muster.ch'
 
@@ -46,6 +46,6 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Erziehungskompetenz und Grundbedürfnisse'
+    expect(page).to have_content 'Elternsein im Fokus'
   end
 end
