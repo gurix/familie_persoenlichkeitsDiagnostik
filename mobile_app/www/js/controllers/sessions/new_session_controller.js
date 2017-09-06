@@ -1,4 +1,4 @@
-app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, $ionicPopup, $translate, userService, $cordovaGeolocation, $state, syncService, $ionicScrollDelegate) {
+app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, $ionicPopup, $translate, userService, $cordovaGeolocation, $state, syncService, $ionicScrollDelegate, notificationService) {
   $scope.step = 0; // Counting steps within the wizzard
   
   /**
@@ -69,6 +69,10 @@ app.controller('SessionsNewSessionController', function($scope, $ionicPlatform, 
     });
     // Publish temporary session
     $scope.sessions.push(session);
+
+    // Enque next x notifications
+    notificationService.enqueue_notifications()
+
     // Try to sync after adding session
     syncService.sync();
     $state.go( 'overview' );

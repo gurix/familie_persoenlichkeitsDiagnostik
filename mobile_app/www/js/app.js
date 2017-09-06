@@ -53,7 +53,7 @@ app = angular.module('ionicApp', ['ionic', 'pascalprecht.translate', 'ngCordova'
   };
 })
 
-.run(function($rootScope, $ionicPlatform, $localForage, $state, syncService) {
+.run(function($rootScope, $ionicPlatform, $localForage, $state, syncService, notificationService) {
   $rootScope.redirect_to_new_session = false;
   
   $rootScope.sessions = [];
@@ -117,6 +117,8 @@ app = angular.module('ionicApp', ['ionic', 'pascalprecht.translate', 'ngCordova'
     // If there is a click on a notification reinit the whole app and redirect to new session page
     $rootScope.$on('$cordovaLocalNotification:click',function (event, notification, state) {
       $rootScope.redirect_to_new_session = true;
+      // Enque next x notifications
+      notificationService.enqueue_notifications()
       init();
     });
     

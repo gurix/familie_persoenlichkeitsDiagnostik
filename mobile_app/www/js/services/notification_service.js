@@ -1,4 +1,4 @@
-app.service('notificationService', function($rootScope, $localForage, $ionicPlatform, $translate, $cordovaLocalNotification) {
+app.service('notificationService', function($rootScope, $localForage, $ionicPlatform, $translate, $cordovaLocalNotification, $filter) {
   
   /**
   * For iOS 8 only, it is a requirement to request for notification permissions first.
@@ -16,6 +16,9 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
   
   // Set a minimum of time between two notifications
   var minimal_space_between = 10 * (60*1000);
+
+  // We only enqueue a certain amount of notifications if the user ignores notifications the app will stopp send new notifications until new actions done
+  var amount_of_notifications_to_enqueue = 5
   
   // Returns the Date object at the very beginning of the day
   today = function() {
@@ -90,44 +93,53 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
   };
   
   this.generateNotifications = function() {
-    // Clear future notifications first
-    if (window.cordova) {
-      $cordovaLocalNotification.cancelAll();
-    }
     console.log('Cancel all notifications');
     
     if (this.notifications_enabled()) {
-      var dates = [];
+      // We store all notification times in the app cache
+      $rootScope.notifications.dates = [];
       
       // Calculate randomized timestamps for each day until the given date
       start = today();
       end = new Date($rootScope.notifications.expiration);
       end.setHours(23,59,59,0);
       while(start < end){
-         dates = dates.concat(randomize_per_day(start));
-         var newDate = start.setDate(start.getDate() + 1);
-         start = new Date(newDate);
+        $rootScope.notifications.dates = $rootScope.notifications.dates.concat(randomize_per_day(start));
+        start = new Date(start.setDate(start.getDate() + 1));
       }
 
-      $translate('notifications.title').then(function (title) {
-        var i = 1;
-        // Add notification for each date
-        dates.forEach(function(date) {
-          if (window.cordova) {
-            $cordovaLocalNotification.schedule({
-               id: i,
-               title: 'Erziehungskompetenz und elterlichen Grundbedürfnisse',
-               text: title,
-               at: new Date(date)
-             });
-             console.log('Add notification at', new Date(date), i);
-          } else {
-            console.log('Add virtually notification at' , new Date(date), i);
-          }
-          i++;
-        });  
-      });
+      // Enque the first x notifications
+      this.enqueue_notifications();
     }
+  };
+
+  // Enqueues a certain amount of notifications. This happens when we first generate all notifications or the user opens a notification.
+  this.enqueue_notifications = function () {
+    // Clear future notifications first
+    if (window.cordova) {
+      $cordovaLocalNotification.cancelAll();
+    }
+
+    $translate('notifications.title').then(function (title) {
+      var i = 1;
+      var future_dates = $rootScope.notifications.dates.filter(function(date) { return date > new Date() });
+      
+      // Add notification for each date
+      future_dates.sort().slice(0, amount_of_notifications_to_enqueue) .forEach(function(date) {
+        if (window.cordova) {
+          $cordovaLocalNotification.schedule({
+             id: i,
+             title: 'Eltern im Fokus',
+             text: title,
+             at: new Date(date)
+           });
+           console.log('Add notification at', new Date(date), i);
+        } else {
+          console.log('Add virtually notification at' , new Date(date), i);
+        }
+        i++;
+      });  
+    });
   };
 
   this.testNotification = function() {
