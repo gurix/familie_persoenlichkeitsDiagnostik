@@ -101,7 +101,7 @@ RSpec.describe 'new session', js: true, type: :feature do
 
     click_button 'Speichern'
 
-    expect(page).to have_content 'Elternsein im Fokus'
+    expect(page).to have_content 'Eltern im Fokus'
 
     # Ensure recoding
     10.times do |i|
