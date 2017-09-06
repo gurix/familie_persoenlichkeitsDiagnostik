@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="ch.zhaw.iap.parentingdiagnostics" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Elternsein im Fokus</name>
+  <name>Eltern im Fokus</name>
   <description>
       Mit Hilfe dieser Diagnostik-App erfassen Sie zu verschiedenen Tageszeiten Ihre elterlichen Bedürfnisse und ihr Kompetenzgefühl. 
   </description>

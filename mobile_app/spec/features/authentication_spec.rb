@@ -26,7 +26,7 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Elternsein im Fokus'
+    expect(page).to have_content 'Eltern im Fokus'
   end
 
   scenario 'signs out and sign in again' do
@@ -46,6 +46,6 @@ RSpec.describe 'Authentication', js: true, type: :feature do
 
     click_button 'Weiter'
 
-    expect(page).to have_content 'Elternsein im Fokus'
+    expect(page).to have_content 'Eltern im Fokus'
   end
 end
