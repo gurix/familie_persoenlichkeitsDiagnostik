@@ -34,9 +34,17 @@
     "amount_per_day": "Erinnerungen pro Tag",
     "expiration": "Letzte Erinnerungen",
     "inactive": " Sie werden zurzeit nicht erinnert.",
-    "active": " Bis {{expiration | date:'dd.MM.y'}} werden Sie {{per_day}} mal pro Tag zwischen 7:00 und 21:00 Uhr zufällig aufgefordert Ihre Situation zu erfassen.",
+    "active": " Bis {{expiration | date:'dd.MM.y'}} werden Sie {{per_day}} mal pro Tag zwischen 7:00 und 21:00 Uhr zufällig aufgefordert Ihre Situation zu erfassen. Wochentags werden Sie nur innerhalb der von Ihnen definierten Zeitpunkten benachrichtigt.",
     "title": "Wie fühlen Sie sich gerade jetzt?",
-    "test_notification": "Benachrichtigung Testen"
+    "test_notification": "Benachrichtigung Testen",
+    "availibility":"Mein Kind ist an folgenden Zeiten bei mir...",
+    "block_1": "von 7 - 9 Uhr",
+    "block_2": "von 9 - 11 Uhr",
+    "block_3": "von 11 - 13 Uhr",
+    "block_4": "von 13 - 15 Uhr",
+    "block_5": "von 15 - 17 Uhr",
+    "block_6": "von 17 - 19 Uhr",
+    "block_7": "von 19 - 21 Uhr"
   },
   "custom_fields": {
     "section_title": "Entwicklungsgedanke",

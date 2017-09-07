@@ -77,6 +77,19 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
           conflict = true; // There is already a date 
         }
       });
+
+      // Check whether the time slot is available, expect on weekends
+      if (date.getDay() > 0 && date.getDay() < 6) {
+        var randDate = new Date(randTime)
+        
+        if($rootScope.notifications.availibility.block_1 == false && randDate.getHours() >= 7 && randDate.getHours() <= 9) { conflict = true }
+        if($rootScope.notifications.availibility.block_2 == false && randDate.getHours() >= 9 && randDate.getHours() <= 11) { conflict = true }
+        if($rootScope.notifications.availibility.block_3  == false && randDate.getHours() >= 11 && randDate.getHours() <= 13) { conflict = true }
+        if($rootScope.notifications.availibility.block_4  == false && randDate.getHours() >= 13 && randDate.getHours() <= 15) { conflict = true }
+        if($rootScope.notifications.availibility.block_5  == false && randDate.getHours() >= 15 && randDate.getHours() <= 17) { conflict = true }
+        if($rootScope.notifications.availibility.block_6  == false && randDate.getHours() >= 17 && randDate.getHours() <= 19) { conflict = true }
+        if($rootScope.notifications.availibility.block_7  == false && randDate.getHours() >= 19 && randDate.getHours() <= 21) { conflict = true }
+      } 
       
       // Add the new randomly generated time to the dates when no conflict is present
       if(conflict === false) dates.push(randTime);
@@ -86,15 +99,31 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
   };
     
   // Bind amount of notifications per day and expiration date globally
-  $localForage.bind($rootScope, { key: 'notifications', defaultValue: { per_day: 0 , expiration: new Date()} });
+  $localForage.bind($rootScope, { key: 'notifications', defaultValue: { 
+    per_day: 0 , 
+    expiration: new Date(), 
+    availibility: {
+      block_1: true,
+      block_2: true,
+      block_3: true,
+      block_4: true,
+      block_5: true,
+      block_6: true,
+      block_7: true
+    }} 
+  });
   
   this.notifications_enabled = function() {
     return($rootScope.notifications && $rootScope.notifications.per_day > 0 && $rootScope.notifications.expiration >= today());
   };
   
   this.generateNotifications = function() {
-    console.log('Cancel all notifications');
     
+    // Clear future notifications first
+    if (window.cordova) {
+      $cordovaLocalNotification.cancelAll();
+    }
+
     if (this.notifications_enabled()) {
       // We store all notification times in the app cache
       $rootScope.notifications.dates = [];
@@ -109,6 +138,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
       }
 
       // Enque the first x notifications
+      // console.log($rootScope.notifications.dates.map(function(x) { return(new Date(x)) }))
       this.enqueue_notifications();
     }
   };
@@ -129,7 +159,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
         if (window.cordova) {
           $cordovaLocalNotification.schedule({
              id: i,
-             title: 'Eltern im Fokus',
+             title: 'Eltern im Fokus!!',
              text: title,
              at: new Date(date)
            });
@@ -147,7 +177,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
     if (window.cordova) {
       $cordovaLocalNotification.schedule({
         id: 666,
-        title: 'Erziehungskompetenz und elterlichen Grundbedürfnisse',
+        title: 'Eltern im Fokus',
         text: "Diese Mitteilung erscheint als Test nach 5 Sekunden.",
 
         at: _5_sec_from_now

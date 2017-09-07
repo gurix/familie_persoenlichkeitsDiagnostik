@@ -15,7 +15,49 @@
         <span class="input-label">{{'notifications.expiration' | translate}}</span>
         <input type="date" ng-model="notifications.expiration" ng-change="generateNotifications()"/>
       </label>
-      
+      <div class="item item-text-wrap">{{'notifications.availibility' | translate}}</div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_1" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_1' | translate}}
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_2" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_2' | translate}}
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_3" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_3' | translate}}
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_4" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_4' | translate}}
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_5" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_5' | translate}}
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_6" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_6' | translate}}
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="notifications.availibility.block_7" ng-change="generateNotifications()">
+        </label>
+        {{'notifications.block_7' | translate}}
+      </div>    
       <div class="item item-text-wrap energized" ng-hide="notifications_enabled()">
         <span class="icon ion-alert-circled"> {{'notifications.inactive' | translate}}</span>
       </div>
@@ -28,6 +70,7 @@
         <i class="icon ion-speakerphone"></i>
         {{'notifications.test_notification' | translate}}
       </a>
+      
     </div>
   </ion-content>
 </ion-pane>
