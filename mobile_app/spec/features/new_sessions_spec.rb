@@ -71,6 +71,8 @@ RSpec.describe 'new session', js: true, type: :feature do
 
     expect(page).to have_content 'Situation erfassen (3/7)'
     expect(page).to have_content 'Wie ist das Wetter gerade jetzt?'
+    expect(page).to have_content 'misserabel'
+    expect(page).to have_content 'super sonnig'
     touch_action '#item0 .noUi-handle', :flick, axis: 'x', distance: 1000, duration: 50
     sleep 2
     find('a', text: 'Weiter').click
@@ -78,6 +80,8 @@ RSpec.describe 'new session', js: true, type: :feature do
 
     expect(page).to have_content 'Situation erfassen (4/7)'
     expect(page).to have_content 'Wie ist die Stimmung in ihrem Arbeitsumfeld heute?'
+    expect(page).to have_content 'depressiv'
+    expect(page).to have_content 'heiter'
     touch_action '#item0 .noUi-handle', :flick, axis: 'x', distance: 1000,  duration: 50
     sleep 2
     find('a', text: 'Weiter').click

@@ -5,8 +5,8 @@
   <div ng-init="answer = get_answer_for(item.key);">
     
     <div class="item item-text-wrap">
-      <div class="text-center"><strong>{{item.text}}</strong></div>
-      <session-bipolar-slider value="answer.value" textleft="steps[step].scale.left" textright="steps[step].scale.right" recoded="answer.recoded === 1"></session-bipolar-slider>
+      <div class="text-center"><strong>{{item.title || item.text}}</strong></div>
+      <session-bipolar-slider value="answer.value" textleft="item.lower_value || steps[step].scale.left" textright="item.upper_value || steps[step].scale.right" recoded="answer.recoded === 1"></session-bipolar-slider>
     </div>
   </div>
 </div>
