@@ -159,7 +159,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
         if (window.cordova) {
           $cordovaLocalNotification.schedule({
              id: i,
-             title: 'Eltern im Fokus!!',
+             title: 'Eltern im Fokus',
              text: title,
              at: new Date(date)
            });
