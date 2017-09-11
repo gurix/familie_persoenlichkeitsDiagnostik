@@ -104,8 +104,9 @@ app.controller('SessionsProfileController', function($scope, userService, $filte
       
       // Push aggregated serie to the list of series
       var klass = dimension;
+      // BUG HERE?
       if ($scope.custom_field_dimensions.indexOf(dimension) >= 0){
-        klass = "col" + i;
+        klass = "col" + $scope.custom_field_dimensions.indexOf(dimension);
         i++;
       }
       
