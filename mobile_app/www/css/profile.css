@@ -3,6 +3,11 @@ path.ct-line {
   stroke-width: 2px;
 }
 
+.ct-series-a .ct-bar {
+  stroke: #005F94;
+  fill: #005F94;
+}
+
 g.col0 {
   stroke: #0066ff;
   fill: #0066ff;

@@ -30,8 +30,8 @@ app.directive('sessionChart', function($timeout) {
             avarage = Number(sum / items.length);
             
             var result = {
-              className: "col" + i + " " + dimension,
-              value: avarage
+                className: "col" + i + " " + dimension,
+                value: avarage 
             };
             
             i++;
@@ -39,9 +39,10 @@ app.directive('sessionChart', function($timeout) {
             return(result);
           });
           $timeout(function(){
+            console.log([series])
             var chart = new Chartist.Bar('#' + scope.chartid +'_' + session.local_id, {
               labels: scope.labels,
-              series: series
+              series: [series]
             }, { 
               high: 50,
               low: -50,
