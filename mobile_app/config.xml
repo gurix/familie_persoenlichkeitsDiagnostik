@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="ch.zhaw.iap.parentingdiagnostics" version="0.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ch.zhaw.iap.parentingdiagnostics" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Eltern im Fokus</name>
   <description>
       Mit Hilfe dieser Diagnostik-App erfassen Sie zu verschiedenen Tageszeiten Ihre elterlichen Bedürfnisse und ihr Kompetenzgefühl. 
@@ -55,7 +55,7 @@
       <string>This app requires photo library access to function properly.</string>
     </config-file>
     <config-file target="*-Info.plist" parent="CFBundleIdentifier">
-      <string>ch.zhaw.iap.family_persoenlichkeitsdiagnostik</string>
+      <string>ch.zhaw.iap.parentingdiagnostics</string>
     </config-file>
     <splash src="resources/ios/splash/Default-568h@2x~iphone.png" width="640" height="1136"/>
     <splash src="resources/ios/splash/Default-667h.png" width="750" height="1334"/>
