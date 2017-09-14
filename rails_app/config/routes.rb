@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   localized do
     get 'terms_and_conditions', to: 'home#terms_and_conditions', as: :terms_and_conditions
+    get 'support', to: 'home#support', as: :support
   end
 
   resources :profiles do

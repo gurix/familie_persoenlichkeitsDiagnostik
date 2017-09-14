@@ -33,3 +33,5 @@ nav.navbar.navbar-default.navbar-static-top
 
           li
             = link_to t('.logout'), destroy_user_session_path, method: :delete
+        li class="#{'active' if request.path == support_path}"
+          a href="#{support_path}" Support
