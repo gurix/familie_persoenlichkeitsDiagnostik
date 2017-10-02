@@ -5,7 +5,7 @@ FactoryGirl.define do
     version { 0 }
     description { Faker::Hacker.say_something_smart }
     local_id { SecureRandom.hex(5) }
-    
+
     trait :with_answers do
       after(:build) do |session|
         items = %w(mrs20_e1 mrs20_e2 mrs20_e3 mrs20_e4 mrs20_g1 gmrs20_g2 mrs20_g3 mrs20_g4 mrs20_n1 mrs20_n2 mrs20_n3

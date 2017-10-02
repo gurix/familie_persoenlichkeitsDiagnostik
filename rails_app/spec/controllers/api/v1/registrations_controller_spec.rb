@@ -13,7 +13,7 @@ describe Api::V1::RegistrationsController do
                                       first_name: 'Hans',
                                       last_name: 'Muster',
                                       gender: 23,
-                                      birth_date: 32.years.ago} }
+                                      birth_date: 32.years.ago } }
     end.to change { User.count }.by(1)
   end
 
