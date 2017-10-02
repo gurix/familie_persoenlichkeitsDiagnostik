@@ -32,7 +32,7 @@
   "notifications": {
     "intro": "Aktivieren Sie die Erinnerungen und Sie werden zu zufälligen Zeiten aufgefordert die aktuelle Situation zu erfassen. Sie können selber definieren wieviel mal pro Tag (zwischen 7:00 und 21:00 Uhr) Sie erinnert werden wollen.",
     "amount_per_day": "Erinnerungen pro Tag",
-    "expiration": "Letzte Erinnerungen",
+    "expiration": "Erinnerungen bis",
     "inactive": " Sie werden zurzeit nicht erinnert.",
     "active": " Bis {{expiration | date:'dd.MM.y'}} werden Sie {{per_day}} mal pro Tag zwischen 7:00 und 21:00 Uhr zufällig aufgefordert Ihre Situation zu erfassen. Wochentags werden Sie nur innerhalb der von Ihnen definierten Zeitpunkten benachrichtigt.",
     "title": "Wie fühlen Sie sich gerade jetzt?",
