@@ -18,7 +18,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
   var minimal_space_between = 10 * (60*1000);
 
   // We only enqueue a certain amount of notifications if the user ignores notifications the app will stopp send new notifications until new actions done
-  var amount_of_notifications_to_enqueue = 5
+  var amount_of_notifications_to_enqueue = 30
   
   // Returns the Date object at the very beginning of the day
   today = function() {
