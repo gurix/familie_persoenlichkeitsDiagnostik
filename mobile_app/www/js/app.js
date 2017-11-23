@@ -24,7 +24,7 @@ app = angular.module('ionicApp', ['ionic', 'pascalprecht.translate', 'ngCordova'
 })
 
 .directive('validateEmail', function() {
-  var EMAIL_REGEXP = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  var EMAIL_REGEXP = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   return {
     require: 'ngModel',
