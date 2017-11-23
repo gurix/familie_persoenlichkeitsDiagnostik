@@ -155,7 +155,7 @@ app.service('notificationService', function($rootScope, $localForage, $ionicPlat
       var future_dates = $rootScope.notifications.dates.filter(function(date) { return date > new Date() });
       
       // Add notification for each date
-      future_dates.sort().slice(0, amount_of_notifications_to_enqueue) .forEach(function(date) {
+      future_dates.sort().slice(0, amount_of_notifications_to_enqueue).forEach(function(date) {
         if (window.cordova) {
           $cordovaLocalNotification.schedule({
              id: i,
