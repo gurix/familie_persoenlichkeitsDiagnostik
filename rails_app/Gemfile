@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0'
@@ -90,25 +90,25 @@ gem 'chartist-rails'
 group :development, :test do
   # Adds step, next, finish and continue commands and breakpoints to Pry using byebug.
   gem 'pry-byebug'
-  
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  
+
   # A testing framework
   gem 'rspec-rails', '~> 3'
-  
+
   # RSpec matches for Mongoid models, including association and validation matchers
   gem 'mongoid-rspec', github: 'gurix/mongoid-rspec', branch: 'mongoid_6_support'
-  
+
   # Acceptance test framework for web applications
   gem 'capybara'
-  
+
   # RSpec::CollectionMatchers lets you express expected outcomes on collections of an object in an example
   gem 'rspec-collection_matchers'
-  
+
   # A PhantomJS driver for Capybara
   gem 'poltergeist'
-  
+
   # Helper class for launching cross-platform applications in a fire and forget manner.
   gem 'launchy'
 end
@@ -119,7 +119,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
-  
+
   # Manage Procfile-based applications
   gem 'foreman'
 end
